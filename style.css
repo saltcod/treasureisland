@@ -29,27 +29,26 @@ body {
 	
 #primary {
 	float: left;
-	margin: 0 -240px 0 0;
+	margin: 5px 0 0 375px;
 	width: 580px;
 	border-left: 1px solid hsl(0, 0%, 80%);
 	padding-left: 25px;
-	margin-top: -165px;
 	}	
 #content {
 	margin: 0 280px 0 0;
 }
-#main .widget-area {
-	float: left;
-	overflow: hidden;
-	width: 220px;
-}
 
-sidebar {
+
+#secondary {
 	float: left;
 	margin-right: 40px;	
 	background: hsl(52, 74%, 91%);
 	padding: 25px;
-	margin-left: 25px;
+ 	
+	margin: 30px 45px 30px 25px;
+	width: 220px;
+	position: fixed;
+	top: 135px;
 }
 
 #colophon {
@@ -69,21 +68,17 @@ sidebar {
 }
 
 
-sidebar .logo {
+#secondary .logo {
 	float: left;
 	margin-left: 75px;
 	clear: right;
 }
-sidebar .text-logo {
+#secondary .text-logo {
 	float: left;
 	clear: both;
 }
 
-sidebar #secondary {
-	float: left;
-	clear: both;
-	margin: 30px 45px 30px 0px;
-}
+ 
 
 .sidebar-bottom {
 	width: 248px;
@@ -91,7 +86,7 @@ sidebar #secondary {
 	margin-top: 35px;
 }
 
-sidebar h3 {
+#secondary h3 {
 	font: 14px "Gotham htf", "Helvetica Neue", Arial;
 	border-bottom: 1px solid;
 	padding-bottom: 4px;
@@ -144,11 +139,11 @@ li#tags {
     text-align: left;
 }
 
-#sidebar #all-tags li a:hover {
+#secondary #all-tags li a:hover {
 	text-decoration: underline;
 }
 
- #sidebar #primary.sidebar #all-tags ul li a{
+ #secondary #primary.sidebar #all-tags ul li a{
 	margin-left: 0;
 }
  
@@ -161,13 +156,13 @@ li#tags {
 	width: 225px;
 }
 
-#sidebar #primary.sidebar a#slick-toggle  {
+#secondary #primary.sidebar a#slick-toggle  {
 	font-size: 13px;
 	margin-left: 8px;
 	font-weight: bold;
 }
  
-#sidebar img.updown {
+#secondary img.updown {
 	margin-left: 25px;
 }
 
@@ -338,6 +333,10 @@ footer.entry-meta {
 -------------------------------------------------------------- */
 header#branding {
 	margin: 75px 30px;
+	width: 250px;
+	position: fixed;
+	top: 25px;
+	left: 20px;
 }
 
 #site-title {
@@ -373,29 +372,31 @@ ul#menu-sidebar li {
 	
 }
 
-sidebar {
+#secondary {
 	width: 280px;
 }
-sidebar ul {
+#secondary ul {
 	list-style: none;
 }
 
-sidebar li a {
+#secondary li a {
 	text-decoration: none;
 	font-size: 12px;
 	text-transform: uppercase;
 	color: #777;
 }
 
-sidebar .textwidget a {
+#secondary .textwidget a {
 	font:14px "Gotham htf", "Helvetica Neue", Arial;
 	text-transform: uppercase;
+	background: lightblue;
+	padding: 4px;
 }
-sidebar li {
+#secondary li {
 	margin-bottom: 7px;
 }
 
-sidebar li a:hover {
+#secondary li a:hover {
 	color:hsl(0, 75%, 45%) ;
 }
 
@@ -403,7 +404,7 @@ sidebar li a:hover {
 	float: left;
 }
 
-sidebar li.confectionery, sidebar li.confectionery a {
+#secondary li.confectionery, sidebar li.confectionery a {
 	font: 11px verdana,Helvetica;
 	font-weight: normal;
 	line-height: 15px;
@@ -411,7 +412,7 @@ sidebar li.confectionery, sidebar li.confectionery a {
 	margin-bottom: 15px;
 }
 
-sidebar li.confectionery a {
+#secondary li.confectionery a {
 	color: hsl(0, 75%, 45%);
 	border-bottom: 1px solid;
 	text-transform: none;

@@ -4,7 +4,6 @@
  * @subpackage Toolbox
  */
 ?>
-<sidebar>
  
 
 	<div id="secondary" class="widget-area" role="complementary">
@@ -31,7 +30,7 @@
 			</aside>
 
 		<?php endif; // end sidebar widget area ?>
-	</div><!-- #secondary .widget-area -->
+	
 
 	<h3>Tags</h3>
 	<li id="tags">	
@@ -53,9 +52,6 @@
 </li> <!-- End All tags box in sidebar -->
 	
 
-		<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-		<div id="tertiary" class="widget-area" role="complementary">
-			<?php dynamic_sidebar( 'sidebar-2' ); ?>
-		</div><!-- #tertiary .widget-area -->
-		<?php endif; ?>
-	</sidebar>
+	 <?php get_search_form( $echo ); ?>
+	 
+</div><!-- #secondary .widget-area -->
