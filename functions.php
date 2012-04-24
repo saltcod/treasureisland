@@ -30,6 +30,16 @@ function exclude_category($query) {
 	add_theme_support( 'post-formats', array( 'aside', 'status', 'link' ) );
 
  
+ 
+ 
+ /* Make all links open in a _Blank window */
+ function autoblank($text) {
+	$return = str_replace('<a', '<a target="_blank"', $text);
+	return $return;
+}
+add_filter('the_content', 'autoblank');
+ 
+ 
 /**
 Theme invidual posts with a new template file located in /single
 **/
