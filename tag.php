@@ -11,7 +11,7 @@ get_sidebar();
 
 ?>
 
-		<section id="primary">
+		<div id="primary" class="sevencol last">
 			<div id="content" role="main">
 
 				<?php the_post(); ?>
@@ -80,6 +80,6 @@ get_sidebar();
 				<?php endif; ?>				
 
 			</div><!-- #content -->
-		</section><!-- #primary -->
+		</div><!-- #primary -->
 
 <?php get_footer(); ?>

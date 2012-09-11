@@ -34,9 +34,12 @@ $(function(){
 
 
 
-
+//Don't show the scrollTop button on small screens 
 $(function() {
-	$("#toTop").scrollToTop();
+	 if( $(window).width() < 481 ){
+		$("#toTop").scrollToTop();
+	 }
+	 
 });
 	
 $(document).ready(function(){

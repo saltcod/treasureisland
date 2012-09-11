@@ -8,7 +8,7 @@ get_header();
 get_sidebar();
 ?>
 
-		<div id="primary">
+		<div id="primary" class="sevencol last">
 			<div id="content" role="main">
 
 				 

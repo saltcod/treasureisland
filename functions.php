@@ -11,6 +11,15 @@
  * to change 'toolbox' to the name of your theme in all the template files
  */
 
+/* Enqueue stylesheets / scripts */
+ 
+add_action( 'wp_enqueue_scripts', 'bookmarkie_add_scripts' );
+ 
+function bookmarkie_add_scripts() {
+    wp_register_style( '1140px', get_template_directory_uri() .'/1140.css');
+    wp_enqueue_style( '1140px' );
+
+}
 
 
 /** Exclude certain post categories from showing on the frontpage  **/
@@ -29,8 +38,8 @@ function exclude_category($query) {
 
 	add_theme_support( 'post-formats', array( 'aside', 'status', 'link' ) );
 
- 
- 
+
+
  
  /* Make all links open in a _Blank window */
  function autoblank($text) {
@@ -38,7 +47,7 @@ function exclude_category($query) {
 	return $return;
 }
 add_filter('the_content', 'autoblank');
- 
+
  
 /**
 Theme invidual posts with a new template file located in /single

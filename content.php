@@ -9,17 +9,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
      
 
-    <?php if ( is_search() ) : // Only display Excerpts for search pages ?>
-    <div class="entry-summary">
-        <?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?>
-    </div><!-- .entry-summary -->
-    <?php else : ?>
-    <div class="entry-content">
+      
+     <div class="entry-content">
         <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?>
         <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'toolbox' ), 'after' => '</div>' ) ); ?>
     </div><!-- .entry-content -->
-    <?php endif; ?>
-
+ 
 
     <footer class="entry-meta">
      
