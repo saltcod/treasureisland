@@ -21,6 +21,10 @@ function bookmarkie_add_scripts() {
 
 }
 
+add_theme_support( 'infinite-scroll', array(
+    'container'  => 'content',
+    'footer'     => 'colophon',
+) );
 
 /** Exclude certain post categories from showing on the frontpage  **/
 function exclude_category($query) {
