@@ -8,10 +8,21 @@ get_header();
 get_sidebar();
 ?>
 
+				 
+
 		<div id="primary" class="sevencol last">
 			<div id="content" role="main">
 
-				 
+
+
+<?php
+	$url = 'http://www.binarymoon.co.uk/';
+	$width = 300;
+	echo bm_mshot ($url, $width);
+?>
+
+
+
 				<a id="toTop" style="display: none; "><img class="text-logo" src="<?php bloginfo('template_url'); ?>/img/scrollup.png" alt="scrollup"></a>
 				
 				<?php /* Start the Loop */ ?>
