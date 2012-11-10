@@ -13,10 +13,15 @@
      <div class="entry-content">
         <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?>
         <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'toolbox' ), 'after' => '</div>' ) ); ?>
+    
+    <div class="thumbnail">
+        <a href="<?php echo treasure_island_get_url();?>"><img src="<?php treasure_island_browser_shot();?>" alt=""></a>                                        
+    </div>
+    
     </div><!-- .entry-content -->
- 
 
-    <footer class="entry-meta">
+ 
+  <footer class="entry-meta">
      
         <?php echo get_the_date(); ?>   
 

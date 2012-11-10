@@ -2,7 +2,8 @@ jQuery(function($){
 	 
 // Scroll to TOP
 
-
+//Extract the link and turn it into a screenshot 
+ 
 $(function(){
 		   
 	$.fn.scrollToTop=function(){

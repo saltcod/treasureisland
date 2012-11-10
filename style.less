@@ -236,7 +236,21 @@ article.category-asides .entry-meta {
 	border-top: 4px solid hsl(0, 75%, 45%);
 }
 
+.entry-content a {
+	font-size: 16px;
+	border-bottom: 1px solid; 
+	padding: 5px;
+		&:hover { 
+			background: lighten(lightblue, 10%);
+			border: none; 
+		 }
+}
 
+.thumbnail {
+	margin: 25px 0 10px;
+ 	img { border: 1px solid #eee; }
+ 		a { background: none; border: none; }
+}
 blockquote {
 	font-size: 15px;
 	line-height: 28px;
@@ -253,6 +267,7 @@ blockquote {
 body.category-confectionery .entry-title {
 	display: none;
 }
+
 
 /* Scroll to top */
 

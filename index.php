@@ -8,7 +8,26 @@ get_header();
 get_sidebar();
 ?>
 
-				 
+<?php if( is_archive() ): ?>
+<header class="page-header">
+	<h1 class="page-title">
+		 <?php the_tags( 'Tag:', '', '' ); ?> 
+	</h1>
+</header>
+<?php elseif( is_search() ): ?>
+<header class="page-header">
+	<h1 class="page-title">
+		 <?php echo "Search / " . get_search_query(); ?> 
+	</h1>
+</header>
+
+<?php elseif( is_404() ): ?>
+<header class="page-header">
+	<h1 class="page-title"> No sign of that around these parts. </h1> 
+</header>
+
+<?php endif; ?>
+
 
 		<div id="primary" class="sevencol last">
 			<div id="content" role="main">
@@ -17,38 +36,9 @@ get_sidebar();
 				
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-	
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					
 
-						<?php if ( is_search() ) : // Only display Excerpts for search pages ?>
-						<div class="entry-summary">
-							<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?>
-						</div><!-- .entry-summary -->
-						<?php else : ?>
-						<div class="entry-content">
-							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?>
-							<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'toolbox' ), 'after' => '</div>' ) ); ?>
-						</div><!-- .entry-content -->
-						<?php endif; ?>
-
-
-						<footer class="entry-meta">
-
-							<?php echo get_the_date(); ?>   
-
-								<?php
-									$tags_list = get_the_tag_list( '', ', ' );
-									if ( $tags_list ):
-								?>
-									<span class="tag-links">
-										<?php printf( __( '<span class="%1$s">Folded neatly in:</span> %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
-									</span>
-									<?php endif; ?>
-									<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-
-						</footer><!-- #entry-meta -->
-					</article><!-- #post-<?php the_ID(); ?> -->
+					<?php get_template_part( 'content', get_post_format() );?>
+				
 				<?php endwhile; ?>
 				
 				<?php /* Display navigation to next/previous pages when applicable */ ?>

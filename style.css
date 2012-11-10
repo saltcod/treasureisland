@@ -191,6 +191,25 @@ article.category-asides header h1 {
 article.category-asides .entry-meta {
   border-top: 4px solid #c91d1d;
 }
+.entry-content a {
+  font-size: 16px;
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+.entry-content a:hover {
+  background: #d4ebf2;
+  border: none;
+}
+.thumbnail {
+  margin: 25px 0 10px;
+}
+.thumbnail img {
+  border: 1px solid #eee;
+}
+.thumbnail a {
+  background: none;
+  border: none;
+}
 blockquote {
   font-size: 15px;
   line-height: 28px;
