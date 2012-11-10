@@ -44,15 +44,54 @@ function exclude_category($query) {
 
 
 
- 
- /* Make all links open in a _Blank window */
- function autoblank($text) {
-	$return = str_replace('<a', '<a target="_blank"', $text);
-	return $return;
-}
-add_filter('the_content', 'autoblank');
 
- 
+/**
+ * Extract the link target from a link — to be used in the browsershot img src
+ *
+ * @since 0.1
+ */
+
+function treasure_island_extract_link($link){
+	$a = new SimpleXMLElement( $link );
+	echo $a['href'];
+}
+
+/* Remove the automatic p tag from the_content() */
+
+remove_filter( 'the_content', 'wpautop' );
+
+
+/**
+ * Print out the current template file to the footer. 
+ * Obviously to be removed in production
+ *
+ * @since 0.1
+ */
+
+function waterstreet_show_template() {
+	global $template;
+	echo '<strong>Template file:</strong>';
+	 print_r($template);
+}
+add_action('wp_footer', 'waterstreet_show_template');
+
+
+/* Fetch a url from the_content() and pass it to wordpress's mShots*/
+function treasure_island_get_url() {
+	$txt = get_the_content();
+	$matches = array();
+	preg_match_all('#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#', $txt, $matches);
+	return $matches[0][0];
+}
+
+function treasure_island_browser_shot(){
+	$base_url = "http://s.wordpress.com/mshots/v1/";
+	$width = 1000;
+	$fetched_url = treasure_island_get_url();
+	$final_url = $base_url . urlencode($fetched_url) .'?w='.$width;
+	echo $final_url;
+}
+
 /**
 Theme invidual posts with a new template file located in /single
 **/
