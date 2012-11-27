@@ -32,6 +32,7 @@ get_sidebar();
 		<div id="primary" class="sevencol last">
 			<div id="content" role="main">
 
+			<p id="toggle-thumbnails"><a href="#">Show Thumbnails</a></p>
 				<a id="toTop" style="display: none; "><img class="text-logo" src="<?php bloginfo('template_url'); ?>/img/scrollup.png" alt="scrollup"></a>
 				
 				<?php /* Start the Loop */ ?>

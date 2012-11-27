@@ -11,7 +11,7 @@ background:  hsl (45, 1.95, 95)
 
 
 @yellow: #F9F5D7;
-
+@blue: #add8e6;
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* =Structure
@@ -246,10 +246,29 @@ article.category-asides .entry-meta {
 }
 
 .thumbnail {
-	margin: 25px 0 10px;
- 	img { border: 1px solid #eee; }
+	margin: 10px 0;
+		.visible {
+			margin: 25px 0 10px;
+		}
+
+ 	img { border: 1px solid #eee; display: none; }
  		a { background: none; border: none; }
 }
+
+p#toggle-thumbnails {
+	margin-bottom: 15px;
+	a {
+		background: @blue;
+		color: #555;
+		font-family: "Gotham HTF", 'Helvetica neue';
+		text-transform: uppercase;
+		padding: 2px;
+		margin-bottom: 25px;
+			&:hover { background: darken(@blue, 5%); }
+		}
+	}
+
+
 blockquote {
 	font-size: 15px;
 	line-height: 28px;

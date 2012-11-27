@@ -200,14 +200,32 @@ article.category-asides .entry-meta {
   border: none;
 }
 .thumbnail {
+  margin: 10px 0;
+}
+.thumbnail .visible {
   margin: 25px 0 10px;
 }
 .thumbnail img {
   border: 1px solid #eee;
+  display: none;
 }
 .thumbnail a {
   background: none;
   border: none;
+}
+p#toggle-thumbnails {
+  margin-bottom: 15px;
+}
+p#toggle-thumbnails a {
+  background: #add8e6;
+  color: #555;
+  font-family: "Gotham HTF", 'Helvetica neue';
+  text-transform: uppercase;
+  padding: 2px;
+  margin-bottom: 25px;
+}
+p#toggle-thumbnails a:hover {
+  background: #99cfe0;
 }
 blockquote {
   font-size: 15px;
